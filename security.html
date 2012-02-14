@@ -1,0 +1,28 @@
+<html>
+
+<body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
+
+
+<title>Security considerations</title>
+
+<h1>Security Considerations </h1>
+
+This series of web pages uses direct calls to the unix shell 
+and is therefore potentially vunerable to tampering and
+spoofing unix commands to be run as part of the typed in data.
+<br>
+<br>
+<br><br><img SRC="red_bullet_half.gif"> The Apache server is configured to run PHP and unix command shell as user 'apache' and has
+limited privilages.
+<br><br><img SRC="red_bullet_half.gif"> All input fields from forms and hidden variables are syntax checked (they must only contain digits).
+<br><br><img SRC="red_bullet_half.gif"> The processing requirements on this server are very high. 
+The processor load will regularly go to 99% when performing RSA size calculations. 
+The size of input values are therefore checked. If extremely large values 
+were requested for instance, the server would appear to hang.
+<br>
+<br>
+<p>
+<a href="javascript:history.back();"> <img src=back.gif align=center border=0> </a>
+</p>
+</body>
+</html>

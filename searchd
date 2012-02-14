@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# R.P. Clark : 02APR2004
+#
+# Takes three args
+# $1 y - the multiplier for phi
+# $2 phi
+# $3 e
+
+# returns (1 + phi.y) % e, which if
+# 0 satisfies the criteria for being a 
+# private key..
+
+
+echo " ( 1 + ( $1 * $2 ) ) % $3 " | bc  
+

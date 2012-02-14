@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# R.P. Clark : 11APR2004
+#
+# Takes one arg, the number to 
+# check. Thisfunction returns 1 if the 
+# number is .gt. 100000
+
+echo "if ( $1 > 100000 ) { 1; } else { 0; } "  | bc
+

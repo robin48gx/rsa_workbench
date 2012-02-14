@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# R.P. Clark : 02APR2004
+#
+# Takes three args
+# $1 d
+# $2 e
+# $3 phi
+
+# returns d.e % phi, which if
+# 1 satisfies the criteria for being a 
+# private key..
+
+
+echo " ( $1 * $2 ) % $3 " | bc  
+

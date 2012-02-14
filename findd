@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# R.P. Clark : 02APR2004
+#
+# Takes three args
+# $1 y - the multiplier for phi
+# $2 phi
+# $3 e
+
+# returns (1 + phi.y) / e, which is
+# a value of d to use.
+
+echo " ( 1 + ( $1 * $2 ) ) / $3 + 0.5" | bc  | sed 's/\..*//' 
+

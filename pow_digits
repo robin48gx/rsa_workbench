@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# R.P. Clark : 10APR2004
+#
+# Takes two args, c and d.
+# returns approx number of decimal
+# digits that c^d would cause.
+
+echo "(l($1)*$2)/l(10)" | bc -l | sed 's/\..*//'
+

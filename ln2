@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# R.P. Clark : 02APR2004
+#
+# Takes one arg, the number to be converted 
+# to log base 2.
+
+# script to take a very large interger number
+# and return a rounded up log to base 2 of it.
+# this corresponds to the number of bits needed
+# to represent the number in binary.
+
+echo "l($1)/l(2)+0.5" | bc -l | sed 's/\..*//'
+

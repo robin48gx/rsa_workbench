@@ -1,0 +1,44 @@
+
+
+# recursive routine to calculate c^d%n
+# by reaking it down. Works only where
+# d is a power of 2.
+#
+define x ( c,d,n) {
+  #-1;  d;  -1;
+  if ( d == 1 ) return (c^d%n);
+  return x(c^2,d/2,n)%n;
+}
+
+r = 1;
+
+# recursive routine to break d into powers of 2
+# and then to collect multiply the results
+# of the 2^n exponents.
+#
+define t(c,d,n) {
+  auto i
+  i = 0;
+  
+  # find biggest power of 2 left in exponentiation
+  # 
+  while(d >= (2^i)) { i = i+1; }
+
+  #
+  # subtract from exponent
+  #
+  d = (d - (2^(i-1)));
+ 
+  
+  if (d>0) { 
+        r=(r*x(c,2^(i-1),n))%n;  # calculate this large exponentiation
+        t(c,d,n);                # recurse with new d value
+        return (2^(i-1));
+  }
+  if (d == 0) {
+         r = (r*x(c,2^(i-1),n))%n; # last one
+         return (2^(i-1));
+  }
+}
+
+

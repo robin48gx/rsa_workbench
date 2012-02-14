@@ -1,0 +1,46 @@
+<html>
+
+<body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
+
+
+<h1><title> Hints to Choosing 'e' </title></h1>
+<h1> Hints to Choosing 'e' </h1>
+The 'e' value along with the Modulus 'n' forms the public key.
+<p>
+It is used to encode information by taking the data to encode 'm',
+ to the power of 'e' and then applying the mod operator
+ (remainder of division) between that result and the modulus value 'n'.
+<p>
+
+<h3>encoded = m<sup>e</sup>%n</h3>
+
+As it is part of the public key, (and therefore published)
+there is no point in it being a large number. Values like 3,5,7,11
+are all acceptable. The only restriction is that they should be co-prime
+to the phi value.
+<p>
+Some automatic algorithms for choosing 'e', simply start at 3, test
+for co-prime against phi, and on failure, increment 'e' by two and try again
+until they hit a co-prime combination.
+<p>
+If a non co-prime number is used, you may find it impossible
+to calculate the secret key in the next stage...
+<p>
+If 1 is chosen for 'e', it will be co-prime to any value of
+phi, but this will mean that the secret key will be 1 also, not very secure !
+
+<p>
+Hit the back button and try some values for 'e' until you have a co-prime
+value....
+
+
+
+<br>
+<br>
+<br>
+<center>
+<a href="javascript:history.back();"> 
+   <img src=back.png align=center border=0> </a> 
+</center>
+</body>
+</html>
