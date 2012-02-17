@@ -2,6 +2,19 @@
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> Encode integer 'm'  </h1>
 <?
+
+$c = $_POST['c'];
+$m = $_POST['m'];
+$e = $_POST['e'];
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+
+
 echo "<h1> Decodes the ciphered integer using the secret 'd' key :  m = c^d mod n. </h1>\n";
 
 //echo "d == $d <p>";

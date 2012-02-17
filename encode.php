@@ -2,6 +2,16 @@
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> Encode integer 'm'  </h1>
 <?
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+$m = $_POST['m'];
+
+echo "<h1> in encode.php m is $m</h1>";
 echo "<h1> Computes the cipher text c = m^e mod n.</h1>";
 echo "<h3> $m^$e%$n </h3>";
 $digits = `./pow_digits $m $e`;

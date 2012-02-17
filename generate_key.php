@@ -42,6 +42,26 @@ For full RSA simulations a <a href="bc.html"> bc </a>
 and on-line <a href="bc_primes.php"> here </a>.
 </p>
 
+<?
+
+// for php5 must do this to catch all the variables...
+
+$c = $_POST['c'];
+$m = $_POST['m'];
+$e = $_POST['e'];
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+
+ 	
+
+?>
+
+
 <br> <br> <A name="PRIME">
 <hr> 
 <h2> FIND SUITABLE PRIMES </h2>

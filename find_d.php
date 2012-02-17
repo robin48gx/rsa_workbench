@@ -2,6 +2,17 @@
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> Find d, the private key  </h1>
 <?
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+
+printf("IN FIND D");
+
+printf("<H1> PHI is %s</h1>",$phi);
 
 //echo "debug n==$n";
 

@@ -2,6 +2,16 @@
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> Generating PHI the secret Modulus  </h1>
 <?
+  $p = $_POST['p'];
+  $q = $_POST['q'];
+  $e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+
 
 $big_num = `echo "($p-1)*($q-1)" | bc `;
 

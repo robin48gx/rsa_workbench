@@ -3,7 +3,24 @@
 
  <?
 // Find Primes From $i to $x
+$x = $_POST['i'];
+$i = $_POST['x'];
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
 
+//$_POST['i']
+//$_POST['x']
+
+//
+//printf(" i is %d x is %d <br>",$i,$x);
+//printf(" i is %d x is %d <br>",$i,$x);
+//printf(" i is %d x is %d <br>",$i,$x);
+//rintf(" i is %d x is %d <br>",$i,$x);
 
 // if they put they parameters the wrong way round...
 

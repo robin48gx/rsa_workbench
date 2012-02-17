@@ -1,6 +1,15 @@
 <html>
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <?
+
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+
 echo "arggggh why wont you call this script $m $e $n<p>";
 echo `echo " a(1)*4" | bc -l `;
 echo "A<p>";

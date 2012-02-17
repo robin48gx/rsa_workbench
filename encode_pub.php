@@ -6,6 +6,18 @@
 <h1> RSA Interactive Simulator / Work Bench : Encoding data with the public Key </h1>
 
 <?
+$c = $_POST['c'];
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+$m = $_POST['m'];
+
+
+//printf("<h1> in encode_pup.php m is %s </h1>",$m);
 
 If ( $n < 1 || $e < 1 || $d < 1 ) {
 

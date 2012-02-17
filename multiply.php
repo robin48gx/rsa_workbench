@@ -1,9 +1,18 @@
-
-
 <html>
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> Public Key 'Modulus' Generation </h1>
 <?
+$e = $_POST['e'];
+$d = $_POST['d'];
+$p = $_POST['p'];
+$n = $_POST['n'];
+$q = $_POST['q'];
+$phi = $_POST['phi'];
+$mprivate = $_POST['mprivate'];
+
+$p = $_POST['p'];
+$q = $_POST['q'];
+
 $p = trim($p);
 $q = trim($q);
 
@@ -22,10 +31,12 @@ printf(" is capable of encrypting a %s bit length key </h2>",$k-1);
 
  <form enctype="multipart/form-data" method="post"
     action="generate_key.php#PHI">
+
  <input type="hidden" name=p value=<? echo $p ?>>
  <input type="hidden" name=q value=<? echo $q ?>>
  <input type="hidden" name=n value=<? echo $n ?>>
  <input type="hidden" name=e value=<? echo $e ?>>
+
  <table>
  <tr><td><input type="submit" name="submit" value="Back"> </td></tr>
  </table>
