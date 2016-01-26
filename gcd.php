@@ -1,7 +1,7 @@
 <html>
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> The Numbers  </h1>
-<?
+<?php
 
 
 $e = $_POST['e'];
@@ -33,12 +33,12 @@ else {
 ?>
 
  
- <input type="hidden" name=p value=<? echo $p ?>>
- <input type="hidden" name=q value=<? echo $q ?>>
- <input type="hidden" name=phi value=<? echo $phi ?>>
- <input type="hidden" name=e value=<? echo $e ?>>
- <input type="hidden" name=n value=<? echo $n ?>>
- <input type="hidden" name=d value=<? echo $d ?>>
+ <input type="hidden" name=p value=<?php echo $p ?>>
+ <input type="hidden" name=q value=<?php echo $q ?>>
+ <input type="hidden" name=phi value=<?php echo $phi ?>>
+ <input type="hidden" name=e value=<?php echo $e ?>>
+ <input type="hidden" name=n value=<?php echo $n ?>>
+ <input type="hidden" name=d value=<?php echo $d ?>>
  <table>
  <tr><td><input type="submit" name="submit" value="Back"> </td></tr>
  </table>

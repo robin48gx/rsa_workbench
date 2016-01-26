@@ -1,8 +1,7 @@
 
 
 # recursive routine to calculate c^d%n
-# by reaking it down. Works only where
-# d is a power of 2.
+# by breaking it down using residues.
 #
 define x ( c,d,n) {
   #-1;  d;  -1;
@@ -40,5 +39,4 @@ define t(c,d,n) {
          return (2^(i-1));
   }
 }
-
 

@@ -5,7 +5,7 @@
 
 <h1> RSA Interactive Simulator / Work Bench : Encoding data with the public Key </h1>
 
-<?
+<?php
 $c = $_POST['c'];
 $e = $_POST['e'];
 $d = $_POST['d'];
@@ -55,7 +55,7 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
      <strong>Modulus (used by both public and private key) </strong>
   </td>
   <td>
-   <input type=text name="n" size=120 value="<? echo $n ?>">
+   <input type=text name="n" size=120 value='<?php echo $n ?>'>
   </td>
  </tr>
 
@@ -65,7 +65,7 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
     <strong> e - the public key </strong>
   </td>
   <td width>
-   <input type=text name="e" size=120 value="<? echo $e ?>">
+   <input type=text name="e" size=120 value='<?php echo $e ?>'>
   </td>
  </tr>
 
@@ -74,12 +74,12 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
     <strong> m - the number to encrypt </strong>
   </td>
   <td width>
-   <input type=text name="m" size=120 value="<? echo $m ?>">
+   <input type=text name="m" size=120 value='<?php echo $m ?>'>
   </td>
  </tr>
-<input type="hidden" name=d value=<? echo $d ?>>
-<input type="hidden" name=p value=<? echo $p ?>>
-<input type="hidden" name=q value=<? echo $q ?>>
+<input type="hidden" name=d value=<?php echo $d ?>>
+<input type="hidden" name=p value=<?php echo $p ?>>
+<input type="hidden" name=q value=<?php echo $q ?>>
 <input type="hidden" name=phi value=<? echo $phi ?>>
  <tr><td><input type="submit" name="submit" value="Encode"> </td></tr>
  </table>
@@ -88,7 +88,7 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
  </table>
 </form>
 
-<? if ( $m ) {  ?> 
+<?php if ( $m ) {  ?> 
 					 
 		     <br> <br>
 		     <hr> 
@@ -96,7 +96,7 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
 		     <A name="DECODE">
 		     <hr> 
 					 
-		     <? $digits = `./pow_digits $c $d ` ?>
+		     <?php $digits = `./pow_digits $c $d ` ?>
 					 
 		     <p>
 		     The decoding process calculates the value of c ^ d % n.
@@ -105,10 +105,10 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
 		     The value c ^ d <i> ( <? printf(" %s ^ %s ",$c,$d); ?> ) </i> 
 		     in this case
 		     would produce a number with approx 
-		     <b> <? echo $digits ?> </b> decimal digits !
+		     <b> <?php echo $digits ?> </b> decimal digits !
 		     </p>
 					 
-		     <? $gt100k = `./gt100k $digits`; 
+		     <?php $gt100k = `./gt100k $digits`; 
 		     if ( $gt100k == 1  ) { ?>
 		         <p>
 			  Obviously this is unacceptable and would cause memory and processing time problems.
@@ -117,11 +117,11 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
 			 </p>
 			 <p> Note that for this very large value, 
 			     the bc script may take up to 
-			     <? $mins_est = (($digits/1000000) * ($digits/1000000)) * 1.5;
+			     <?php $mins_est = (($digits/1000000) * ($digits/1000000)) * 1.5;
                                 printf("%2.2f",$mins_est); ?> 
 						 minutes to finish this calculation.
                          </P>
-		     <? } ?>
+		     <?php } ?>
 		     <br>
 		     <form enctype="multipart/form-data" method="post"
 		     action="decode.php">
@@ -139,7 +139,7 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
 		     <strong>Modulus (used by both public and private key) </strong>
 		     </td>
 		     <td>
-		     <input type=text name="n" size=120 value="<? echo $n ?>">
+		     <input type=text name="n" size=120 value="<?php echo $n ?>">
 		     </td>
 		     </tr>
 
@@ -149,7 +149,7 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
 		     <strong>d - the private key</strong>
 		     </td>
 		     <td>
-		     <input type=text name="d" size=120 value="<? echo $d ?>" >
+		     <input type=text name="d" size=120 value="<?php echo $d ?>" >
 		     </td>
 		     </tr>
 
@@ -159,36 +159,36 @@ to the power of e, and then applying the modulus for n (i.e. p times q).
 		     <strong> c - the number to de-crypt </strong>
 		     </td>
 		     <td width>
-		     <input type=text name="c" size=120 value="<? echo $c ?>">
+		     <input type=text name="c" size=120 value="<?php echo $c ?>">
 		     </td>
 		     </tr>
 
 				       
 
-		     <input type="hidden" name=digits value=<? echo $digits ?>
-		     <input type="hidden" name=m value=<? echo $m ?>>
-		     <input type="hidden" name=e value=<? echo $e ?>>
-		     <input type="hidden" name=phi value=<? echo $phi ?>>
+		     <input type="hidden" name=digits value=<?php echo $digits ?>
+		     <input type="hidden" name=m value=<?php echo $m ?>>
+		     <input type="hidden" name=e value=<?php echo $e ?>>
+		     <input type="hidden" name=phi value=<?php echo $phi ?>>
 		     <tr><td><input type="submit" name="submit" value="Decode"> </td></tr>
 		     </table>
 
 		     </form>
 
-		     <? } // if to hide decode menu until a value has been coded
+		     <?php } // if to hide decode menu until a value has been coded
 ?>			
 
 <form enctype="multipart/form-data" method="post"
 action="generate_key.php">
-<input type="hidden" name=digits value=<? echo $digits ?>
-<input type="hidden" name=m value=<? echo $m ?>>
-<input type="hidden" name=e value=<? echo $e ?>>
-<input type="hidden" name=n value=<? echo $n ?>>
-<input type="hidden" name=d value=<? echo $d ?>>
-<input type="hidden" name=phi value=<? echo $phi ?>>
+<input type="hidden" name=digits value=<?php echo $digits ?>
+<input type="hidden" name=m value=<?php echo $m ?>>
+<input type="hidden" name=e value=<?php echo $e ?>>
+<input type="hidden" name=n value=<?php echo $n ?>>
+<input type="hidden" name=d value=<?php echo $d ?>>
+<input type="hidden" name=phi value=<?php echo $phi ?>>
 <input type="submit" name="submit" value="Back to Generate Key">
 </form>
 
-   <? } // all RSA key components defined
+   <?php } // all RSA key components defined
 ?>
 <center> <a href="index.php" border=0> <img src="home.png" border=0> </a> </center>
 </body>

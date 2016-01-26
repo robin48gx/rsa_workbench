@@ -1,7 +1,7 @@
 <html>
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 
- <?
+ <?php
 // Find Primes From $i to $x
 $x = $_POST['i'];
 $i = $_POST['x'];
@@ -63,17 +63,17 @@ else {
 <form enctype="multipart/form-data" method="post"
     action="generate_key.php#MUL">
 
- <input type="hidden" name=m value=<? echo $m ?>>
- <input type="hidden" name=e value=<? echo $e ?>>
- <input type="hidden" name=npublic value=<? echo $npublic ?>>
- <input type="hidden" name=nprivate value=<? echo $nprivate ?>>
+ <input type="hidden" name=m value=<?php echo $m ?>>
+ <input type="hidden" name=e value=<?php echo $e ?>>
+ <input type="hidden" name=npublic value=<?php echo $npublic ?>>
+ <input type="hidden" name=nprivate value=<?php echo $nprivate ?>>
 <table>
 <tr>
   <td>
     <strong>p</strong>
   </td>
   <td>
-   <input type=text name="p" cols=80 value="<? echo $p ?>" colspan=2>
+   <input type=text name="p" cols=80 value='<?php echo $p ?>' colspan=2>
   </td>
  </tr>
 
@@ -82,7 +82,7 @@ else {
     <strong>q</strong>
   </td>
   <td>
-   <input type=text name="q" cols=80 value="<? echo $q ?>" colspan=2>
+   <input type=text name="q" cols=80 value='<?php echo $q ?>' colspan=2>
   </td>
  </tr>
  <tr><td><input type="submit" name="submit" value="Next"> </td></tr>

@@ -1,7 +1,7 @@
 <html>
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> Encode integer 'm'  </h1>
-<?
+<?php
 
 $c = $_POST['c'];
 $m = $_POST['m'];
@@ -47,29 +47,31 @@ if ($gt100_k != 1) {
   echo $clear;
 }
 else {
-  echo "<h3> The number of digits produced by the exponentiation of c^d is greater than 100,0000 </h3>";
+  echo "<h3> The number of digits produced by the exponentiation of c^d is greater than 100,000 </h3>";
 
   echo "<h3> The resursive (see <a href=\"maths.html\"> recursive exponentiation break down </a>) routines will be applied instead to calculate c^d%n </h3>";
   $clear = `./cbe.sh 'A $c B $d C $n D'`; // php is very nasty about sending multiple args to scripts 
-  echo "<h3> this gives the 'in clear' result </h3>";
-  echo $clear;
 
+  echo $clear;
+  echo "<h3> The resursive routines can take some time to run, too long to leave a web page waitng! </h3>";
+  echo "<h3> If you don't have `bc' on your system, grow up and get a proper operating system. </h3>";
 }
+$me = `whoami`;
 $date = `date`;
-printf("<p> End Time == %s</p> \n",$date);
+printf("<p> End Time == %s me=%s</p> \n",$date,$me);
 printf("<form enctype=\"multipart/form-data\" method=\"post\"
     action=\"encode_pub.php#KEYS\">");
 ?>
 
-<input type="hidden" name=d value=<? echo $d ?>>
-<input type="hidden" name=q value=<? echo $q ?>>
-<input type="hidden" name=p value=<? echo $p ?>>
-<input type="hidden" name=phi value=<? echo $phi ?>>
-<input type="hidden" name=e value=<? echo $e ?>>
-<input type="hidden" name=n value=<? echo $n ?>>
-<input type="hidden" name=c value=<? echo $c ?>>
-<input type="hidden" name=m value=<? echo $m ?>>
-<input type="hidden" name=digits value=<? echo $digits ?>>
+<input type="hidden" name=d value=<?php echo $d ?>>
+<input type="hidden" name=q value=<?php  echo $q ?>>
+<input type="hidden" name=p value=<?php  echo $p ?>>
+<input type="hidden" name=phi value=<?php  echo $phi ?>>
+<input type="hidden" name=e value=<?php  echo $e ?>>
+<input type="hidden" name=n value=<?php  echo $n ?>>
+<input type="hidden" name=c value=<?php  echo $c ?>>
+<input type="hidden" name=m value=<?php  echo $m ?>>
+<input type="hidden" name=digits value=<?php  echo $digits ?>>
 <table>
 <tr>
   <td>

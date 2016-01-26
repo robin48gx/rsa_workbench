@@ -1,12 +1,13 @@
 <html>
 <body BGCOLOR="#00E0E0" link="#001fC0" vlink="#000080" text="#00000f">
 <h1> PI - calculated to required precision </h1>
-<?
+<?php
 $e = $_POST['e'];
 $d = $_POST['d'];
 $p = $_POST['p'];
 $n = $_POST['n'];
 $q = $_POST['q'];
+$precision = $_POST['precision'];
 $phi = $_POST['phi'];
 $mprivate = $_POST['mprivate'];
 
@@ -21,6 +22,8 @@ printf(" <h2> which is the result of %d decimal places </h2> \n", $precision);
 $date = `date`;
 printf(" <p>End Time == %s </p>\n",$date);
 ?>
+
+
 <p>
 
 <center> 

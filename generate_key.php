@@ -42,7 +42,7 @@ For full RSA simulations a <a href="bc.html"> bc </a>
 and on-line <a href="bc_primes.php"> here </a>.
 </p>
 
-<?
+<?php
 
 // for php5 must do this to catch all the variables...
 
@@ -94,11 +94,11 @@ $mprivate = $_POST['mprivate'];
   </td>
  </tr>
 
- <input type="hidden" name=p value=<? echo $p ?>>
- <input type="hidden" name=q value=<? echo $q ?>>
- <input type="hidden" name=phi value=<? echo $phi ?>>
- <input type="hidden" name=e value=<? echo $e ?>>
- <input type="hidden" name=n value=<? echo $n ?>>
+ <input type="hidden" name=p value=<?php echo $p ?>>
+ <input type="hidden" name=q value=<?php echo $q ?>>
+ <input type="hidden" name=phi value=<?php echo $phi ?>>
+ <input type="hidden" name=e value=<?php echo $e ?>>
+ <input type="hidden" name=n value=<?php echo $n ?>>
 
  <tr><td><input type="submit" name="submit" value="Next"> </td></tr>
  </table>
@@ -132,7 +132,7 @@ Test your values of P and Q here
     <strong>Min</strong>
   </td>
   <td>
-   <input type=text name="p" size=120 value="<? echo $p ?>" >
+   <input type=text name="p" size=120 value="<?php echo $p ?>" >
   </td>
  </tr>
 
@@ -141,14 +141,14 @@ Test your values of P and Q here
     <strong>max</strong>
   </td>
   <td>
-   <input type=text name="q" size=120 value="<? echo $q ?>" >
+   <input type=text name="q" size=120 value="<?php echo $q ?>" >
   </td>
  </tr>
 
-<input type="hidden" name=phi value=<? echo $phi ?>>
-<input type="hidden" name=e value=<? echo $e ?>>
-<input type="hidden" name=n value=<? echo $n ?>>
-<input type="hidden" name=mprivate value=<? echo $mprivate ?>>
+<input type="hidden" name=phi value=<?php echo $phi ?>>
+<input type="hidden" name=e value=<?php echo $e ?>>
+<input type="hidden" name=n value=<?php echo $n ?>>
+<input type="hidden" name=mprivate value=<?php echo $mprivate ?>>
  <tr><td><input type="submit" name="submit" value="Next"> </td></tr>
  </table>
 </form>
@@ -177,7 +177,7 @@ When you have chosen your two prime numbers.....we need to find <strong> phi == 
     <strong>p</strong>
   </td>
   <td>
-   <input type=text name="p" size=120 value="<? echo $p ?>" >
+   <input type=text name="p" size=120 value="<?php echo $p ?>" >
   </td>
  </tr>
 
@@ -186,12 +186,12 @@ When you have chosen your two prime numbers.....we need to find <strong> phi == 
     <strong>q</strong>
   </td>
   <td>
-   <input type=text name="q" size=120 value="<? echo $q ?>" >
+   <input type=text name="q" size=120 value="<?php echo $q ?>" >
   </td>
  </tr>
-<input type="hidden" name=phi value=<? echo $phi ?>>
-<input type="hidden" name=e value=<? echo $e ?>>
-<input type="hidden" name=n value=<? echo $n ?>>
+<input type="hidden" name=phi value=<?php echo $phi ?>>
+<input type="hidden" name=e value=<?php echo $e ?>>
+<input type="hidden" name=n value=<?php echo $n ?>>
 
 
  <tr><td><input type="submit" name="submit" value="Next"> </td></tr>
@@ -228,7 +228,7 @@ which returns 1 when co-prime values are entered.
     <strong>e</strong>
   </td>
   <td>
-   <input type=text name="e" size=120 value="<? echo $e ?>">
+   <input type=text name="e" size=120 value="<?php echo $e ?>">
   </td>
  </tr>
 
@@ -237,13 +237,13 @@ which returns 1 when co-prime values are entered.
     <strong>phi</strong>
   </td>
   <td>
-   <input type=text name="phi" size=120 value="<? echo $phi ?>">
+   <input type=text name="phi" size=120 value="<?php echo $phi ?>">
   </td>
  </tr>
 
-<input type="hidden" name=p value=<? echo $p ?>>
-<input type="hidden" name=q value=<? echo $q ?>>
-<input type="hidden" name=n value=<? echo $n ?>>
+<input type="hidden" name=p value=<?php echo $p ?>>
+<input type="hidden" name=q value=<?php echo $q ?>>
+<input type="hidden" name=n value=<?php echo $n ?>>
 
  <tr><td><input type="submit" name="submit" value="Next"> </td></tr>
  </table>
@@ -274,7 +274,7 @@ Note on the algorithm used are <a href="find_d.html"> here </a>
     <strong>d</strong>
   </td>
   <td>
-   <input type=text name="d" size=120 value="<? echo $d ?>" >
+   <input type=text name="d" size=120 value="<?php echo $d ?>" >
   </td>
  </tr>
 
@@ -283,13 +283,13 @@ Note on the algorithm used are <a href="find_d.html"> here </a>
     <strong>phi</strong>
   </td>
   <td width>
-   <input type=text name="phi" size=120 value="<? echo $phi ?>">
+   <input type=text name="phi" size=120 value="<?php echo $phi ?>">
   </td>
  </tr>
-<input type="hidden" name=e value=<? echo $e ?>>
-<input type="hidden" name=p value=<? echo $p ?>>
-<input type="hidden" name=q value=<? echo $q ?>>
-<input type="hidden" name=n value=<? echo $n ?>>
+<input type="hidden" name=e value=<?php echo $e ?>>
+<input type="hidden" name=p value=<?php echo $p ?>>
+<input type="hidden" name=q value=<?php echo $q ?>>
+<input type="hidden" name=n value=<?php echo $n ?>>
  <tr><td><input type="submit" name="submit" value="Next"> </td></tr>
  </table>
 
@@ -316,7 +316,7 @@ Note on the algorithm used are <a href="find_d.html"> here </a>
     MODULUS (n)
    </td>
    <td> 
-     <? echo $n ?>
+     <?php echo $n ?>
    </td>
  </tr>
  <tr>
@@ -325,7 +325,7 @@ Note on the algorithm used are <a href="find_d.html"> here </a>
    </td>
 
    <td>
-    <? echo $e ?>
+    <?php echo $e ?>
    </td>
  </tr>
 
@@ -343,7 +343,7 @@ Note on the algorithm used are <a href="find_d.html"> here </a>
     MODULUS (n)
    </td>
    <td> 
-     <? echo $n ?>
+     <?php echo $n ?>
    </td>
  </tr>
  <tr>
@@ -352,7 +352,7 @@ Note on the algorithm used are <a href="find_d.html"> here </a>
    </td>
 
    <td>
-    <? echo $d ?>
+    <?php echo $d ?>
    </td>
  </tr>
 
@@ -377,12 +377,12 @@ the private key.
     action="encode_pub.php">
 
 
-  <input type="hidden" name=phi value=<? echo $phi ?>>
-  <input type="hidden" name=d value=<? echo $d ?>>
-  <input type="hidden" name=e value=<? echo $e ?>>
-  <input type="hidden" name=p value=<? echo $p ?>>
-  <input type="hidden" name=q value=<? echo $q ?>>
-  <input type="hidden" name=n value=<? echo $n ?>>
+  <input type="hidden" name=phi value=<?php echo $phi ?>>
+  <input type="hidden" name=d value=<?php echo $d ?>>
+  <input type="hidden" name=e value=<?php echo $e ?>>
+  <input type="hidden" name=p value=<?php echo $p ?>>
+  <input type="hidden" name=q value=<?php echo $q ?>>
+  <input type="hidden" name=n value=<?php echo $n ?>>
   <tr><td><input type="submit" name="submit" value="Encode Using Public Key"> </td></tr>
   </table>
   </form>

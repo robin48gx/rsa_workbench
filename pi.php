@@ -35,7 +35,7 @@ may require a bit of a wait though....
  </table>
 
 
-<input type="hidden" name=luid value=<? echo $luid ?>>
+<input type="hidden" name=luid value=<?php echo $luid ?> 
 </form>
 
 <center>
