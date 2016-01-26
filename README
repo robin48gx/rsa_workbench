@@ -5,8 +5,8 @@ process.
 The prime numbers used are much smaller than for a normal
 RSA key pair, but still have massive intermediate numbers
 in the calculations. These web pages also indicate the 
-prime number pairs effect on the size of incription key
-possible (i.e. the number of bits it uses).
+prime number pairs effect on the size of encription key
+possible (i.e. the number of bits it could support).
 In fact you can try to RSA encrypt values too large
 for the keys you have made, and see the erronous results of doing this.
 
@@ -16,5 +16,5 @@ on my MSc in Software Engineering --- Brighton University UK --- way back in 200
 good starting point for getting to grips with git-hub (where I had to create 
 proper rsa keys from linux, to get it all going).
 
-Robin Clark 08MAR2012
+Robin Clark 26JAN2016: 08MAR2012
 
